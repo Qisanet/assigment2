@@ -1,38 +1,32 @@
-import React from 'react'
-import Card from './Card'
-import './index.css'
+import React from "react";
+import CardList from "./Cardlist";
+import "./App.css"; 
 
-
-
-function App() {  
-  const mylist=[
+const App = () => {
+  const cardData = [
     {
-      image:"https://via.placeholder.com/150",
-      tittle:"Card1",
-      description:"THis is my card one"
-  },
+      image: "https://via.placeholder.com/150",
+      title: "Card 1",
+      description: "This is the description for card 1.",
+    },
     {
-      image:"https://via.placeholder.com/150",
-      tittle:"Card2",
-      description:"THis is my card two"
-  },
+      image: "https://via.placeholder.com/150",
+      title: "Card 2",
+      description: "This is the description for card 2.",
+    },
     {
-      image:"https://via.placeholder.com/150",
-      tittle:"Card3",
-      description:"THis is my card three"
-  },
-    
-
+      image: "https://via.placeholder.com/150",
+      title: "Card 3",
+      description: "This is the description for card 3.",
+    },
   ];
- 
-  return (
-    <
-    Card mycard={mylist}/>
-   
-     
-      
-    
-  )
-}
 
-export default App
+  return (
+    <div className="app">
+      <h1>Card List</h1>
+      <CardList data={cardData} />
+    </div>
+  );
+};
+
+export default App;

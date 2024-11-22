@@ -1,19 +1,14 @@
-import React from 'react';
+import React from "react";
+import "./Card.css"; // Import styles
 
-function Card({ mycard }) {
+const Card = ({ image, title, description }) => {
   return (
-    <div>
-      {mycard.map((newcard, index) => (
-        <div className="card" key={index}>
-          <img className="img"src={newcard.image} alt={newcard.tittle} />
-          <h1>{newcard.tittle}</h1>
-          <p>{newcard.description}</p>
-
-        </div>
-
-      ))}
+    <div className="card">
+      <img src={image} alt={title} className="card-image" />
+      <h3>{title}</h3>
+      <p>{description}</p>
     </div>
   );
-}
+};
 
 export default Card;
